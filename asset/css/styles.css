@@ -67,7 +67,7 @@ a {
 
 .navbar {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 
   padding: 12px 0;
@@ -304,8 +304,9 @@ a {
 
 .feature-list {
   margin-top: 70px;
-  display: flex;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 25px;
 }
 
 .feature-item {
@@ -338,6 +339,11 @@ a {
   color: #a3a6ab;
   font-size: 1.4rem;
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
 }
 
 .feature-item .items-data {
@@ -545,7 +551,7 @@ a {
 }
 
 .footer .row-top {
-  gap: 185px;
+  column-gap: 185px;
   align-items: normal;
 }
 
@@ -570,6 +576,13 @@ a {
 .footer .list,
 .footer .desc {
   margin-top: 42px;
+}
+
+.footer .icon-footer {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
 }
 
 .footer .items {

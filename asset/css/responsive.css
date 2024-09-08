@@ -1,0 +1,274 @@
+/* PC */
+@media screen and (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+  .show-on-mobile {
+    display: none;
+  }
+
+  .feature .view-all {
+    display: none;
+  }
+}
+
+/* Tablet & Mobile */
+@media screen and (max-width: 991.98px) {
+  /* Tablet/mobile menu */
+  .content {
+    max-width: calc(100% - 100px);
+  }
+  .navbar {
+    position: relative;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .toggle-menu svg {
+    width: 24px;
+    color: #666;
+  }
+
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s ease;
+  }
+
+  .menu-drawer {
+    padding: 60px;
+    position: fixed;
+    inset: 0 40% 0 0;
+    background: #fff;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+  }
+
+  .menu-drawer ul {
+    margin-top: 32px;
+  }
+
+  .menu-drawer ul a {
+    display: block;
+    padding: 14px 0;
+    color: #4f4d4d;
+    font-weight: 500;
+  }
+
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  .menu-drawer .separate {
+    border-top: 1px solid #ccc;
+  }
+
+  .hero .info {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .hero .info .desc {
+    width: 80%;
+    margin: 30px auto auto;
+  }
+
+  .hero .hero-img {
+    display: none;
+  }
+
+  .client .list-supplier {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Guides .item-icon {
+    flex: 1;
+  }
+
+  .feature-list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+
+  .stat .row {
+    flex-direction: column;
+  }
+
+  .stat .row-arrow {
+    flex-direction: row;
+  }
+
+  .stat .img-block,
+  .stat .info {
+    width: 100%;
+  }
+
+  .stat .img-block {
+    order: 2;
+  }
+
+  .stat .info {
+    padding: 0;
+    text-align: center;
+    order: 1;
+  }
+
+  .stat .info .subtitle::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .stat .info .desc {
+    width: 78%;
+    margin: 20px auto 50px;
+  }
+
+  .stat .row-qlt {
+    flex-direction: row;
+  }
+
+  .stat .item-rating strong {
+    font-size: 5rem;
+  }
+
+  .stat .item-rating .desc {
+    font-size: 1.5rem;
+  }
+
+  .subcribe-info img {
+    display: none;
+  }
+
+  .row-top {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    row-gap: 80px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .show-on-mobile {
+    display: none;
+  }
+
+  .feature .view-all {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+  .content {
+    max-width: calc(100% - 40px);
+  }
+  .menu-drawer {
+    padding: 40px;
+  }
+
+  .navbar .action {
+    display: none;
+  }
+
+  .hero .info h1.title {
+    font-size: 4.2rem;
+  }
+
+  .hero .info .desc {
+    font-size: 1.5;
+  }
+
+  .Guides .desc {
+    width: 60%;
+  }
+
+  .Guides .list-icon {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    row-gap: 60px;
+  }
+
+  .Guides .item-icon {
+    margin: 0;
+  }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rating.row p:first-child {
+    margin: 20px auto 0;
+  }
+
+  .rating.row p + p {
+    display: none;
+  }
+
+  .feature .link-view {
+    display: none;
+  }
+
+  .feature .view-all {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .stat .img-block .image {
+    width: 100%;
+  }
+
+  .row.row-qlt {
+    flex-direction: column;
+    row-gap: 60px;
+    align-items: center;
+  }
+
+  .Subscribe .subcribe-info {
+    padding: 80px 20px;
+  }
+
+  .footer .row-top {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .footer .list,
+  .footer .desc {
+    line-height: 1.8;
+  }
+
+  .footer .icon-footer {
+    justify-content: center;
+  }
+
+  .footer .row + .row {
+    flex-direction: column;
+  }
+
+  .footer .row + .row p {
+    margin-top: 30px;
+  }
+}

@@ -10,17 +10,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./asset/css/styles.css" />
+    <link rel="stylesheet" href="./asset/css/responsive.css" />
     <title>project-1</title>
   </head>
   <body>
     <main>
+      <!-- PC header -->
       <header class="fixed-header">
         <div class="content">
           <nav class="navbar">
+            <!-- Table/mobile menu -->
+            <label for="menu-checkbox" class="toggle-menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  fill="currentColor"
+                  d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </label>
+
             <!-- logo  -->
-            <img src="./asset/img/logo-website.svg" alt="Besnik." />
+            <a href="#!"><img src="./asset/img/Besnik..svg" alt="Besnik." class="logo" /></a>
             <!--Navigation  -->
-            <ul>
+            <ul id="pc-nav">
               <li>
                 <a href="!#">Home</a>
               </li>
@@ -36,6 +48,12 @@
               <li>
                 <a href="!#">Contact</a>
               </li>
+              <li class="show-on-mobile separate">
+                <a href="!#">Sign in</a>
+              </li>
+              <li class="show-on-mobile">
+                <a href="!#">Sign up</a>
+              </li>
             </ul>
             <!-- sign in/up button  -->
             <div class="action">
@@ -43,6 +61,22 @@
               <a href="!#" class="btn sign-up">Sign up</a>
             </div>
           </nav>
+        </div>
+      </header>
+
+      <!-- Tablet/Mobile header -->
+      <header class="mobile-header">
+        <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden />
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+
+        <!-- Menu content -->
+        <div class="menu-drawer">
+          <!-- logo  -->
+          <a href="#!"><img src="./asset/img/Besnik..svg" alt="Besnik." /></a>
+
+          <!-- Navigation -->
+          <ul id="mobile-nav"></ul>
         </div>
       </header>
 
@@ -187,6 +221,10 @@
               </div>
             </div>
           </div>
+
+          <div class="view-all">
+            <a href="#!" class="btn">View All Properties</a>
+          </div>
         </div>
       </div>
 
@@ -198,7 +236,7 @@
               <img src="./asset/img/stat-img.jpg" alt="" class="image" />
               <div class="stat">
                 <div class="trend">
-                  <div class="row">
+                  <div class="row row-arrow">
                     <strong class="value">40,000+</strong>
                     <img src="./asset/img/trend-arrow.svg" alt="" class="icon" />
                   </div>
@@ -256,7 +294,7 @@
             </div>
           </div>
 
-          <div class="row">
+          <div class="row row-qlt">
             <div class="item-rating">
               <strong>2,500</strong>
               <p class="desc">Homes For Sale</p>
@@ -286,82 +324,82 @@
           </div>
         </div>
       </div>
-
-      <!-- footer -->
-      <div class="footer">
-        <div class="content">
-          <div class="row row-top">
-            <div class="column">
-              <h3 class="heading">Product</h3>
-              <ul class="list">
-                <li class="items">
-                  <a href="">Listing</a>
-                </li>
-                <li class="items">
-                  <a href="">Property</a>
-                </li>
-                <li class="items">
-                  <a href="">Agents</a>
-                </li>
-                <li class="items">
-                  <a href="">Blog</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="column">
-              <h3 class="heading">Resources</h3>
-              <ul class="list">
-                <li class="items">
-                  <a href="">Our Homes</a>
-                </li>
-                <li class="items">
-                  <a href="">Member Stories</a>
-                </li>
-                <li class="items">
-                  <a href="">Video</a>
-                </li>
-                <li class="items">
-                  <a href="">Free trial</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="column">
-              <h3 class="heading">Company</h3>
-              <ul class="list">
-                <li class="items">
-                  <a href="">Patnerships</a>
-                </li>
-                <li class="items">
-                  <a href="">Terms of use</a>
-                </li>
-                <li class="items">
-                  <a href="">Privacy</a>
-                </li>
-                <li class="items">
-                  <a href="">Sitemap</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="column">
-              <h3 class="heading">Get in touch</h3>
-              <p class="desc">You’ll find your next home, in any style you prefer.</p>
-              <div class="icon-footer">
-                <img src="./asset/img/Facebook icon.svg" alt="" class="icon-img" />
-                <img src="./asset/img/twitter icon.svg" alt="" class="icon-img" />
-                <img src="./asset/img/lindedin icon.svg" alt="" class="icon-img" />
-              </div>
-            </div>
+    </main>
+    <!-- footer -->
+    <div class="footer">
+      <div class="content">
+        <div class="row row-top">
+          <div class="column">
+            <h3 class="heading">Product</h3>
+            <ul class="list">
+              <li class="items">
+                <a href="">Listing</a>
+              </li>
+              <li class="items">
+                <a href="">Property</a>
+              </li>
+              <li class="items">
+                <a href="">Agents</a>
+              </li>
+              <li class="items">
+                <a href="">Blog</a>
+              </li>
+            </ul>
           </div>
 
-          <div class="row">
-            <img src="./asset/img/Besnik..svg" alt="" class="logo-footer" />
-            <p class="copyright">Copyright 2020.com, All rights reserved.</p>
+          <div class="column">
+            <h3 class="heading">Resources</h3>
+            <ul class="list">
+              <li class="items">
+                <a href="">Our Homes</a>
+              </li>
+              <li class="items">
+                <a href="">Member Stories</a>
+              </li>
+              <li class="items">
+                <a href="">Video</a>
+              </li>
+              <li class="items">
+                <a href="">Free trial</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h3 class="heading">Company</h3>
+            <ul class="list">
+              <li class="items">
+                <a href="">Patnerships</a>
+              </li>
+              <li class="items">
+                <a href="">Terms of use</a>
+              </li>
+              <li class="items">
+                <a href="">Privacy</a>
+              </li>
+              <li class="items">
+                <a href="">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h3 class="heading">Get in touch</h3>
+            <p class="desc">You’ll find your next home, in any style you prefer.</p>
+            <div class="icon-footer">
+              <img src="./asset/img/Facebook icon.svg" alt="" class="icon-img" />
+              <img src="./asset/img/twitter icon.svg" alt="" class="icon-img" />
+              <img src="./asset/img/lindedin icon.svg" alt="" class="icon-img" />
+            </div>
           </div>
         </div>
+
+        <div class="row">
+          <img src="./asset/img/Besnik..svg" alt="" class="logo-footer" />
+          <p class="copyright">Copyright 2020.com, All rights reserved.</p>
+        </div>
       </div>
-    </main>
+    </div>
+    <script src="./asset/js/main.js"></script>
   </body>
 </html>
